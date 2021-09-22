@@ -1,0 +1,211 @@
+:root{
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%); 
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    min-height: 100vh;
+    position: relative;
+    padding: 70px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--red) url('../images/bg-intro-desktop.png') center center ;
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+h1 {
+    font-size: 2.7em;
+    line-height: 1.2;
+}
+
+/* Main */
+main {
+    margin: auto;
+    max-width: 1100px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* -------------------------------------- Section ---------------------------------- */
+main section.heading-info {
+    width: 50%;
+    padding-left: 10px;
+}
+main section.heading-info p{
+    margin-top: 20px;
+}
+
+
+
+/* -------------------------------------- Aside ---------------------------------- */
+main aside {
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+}
+
+main aside div.offer {
+    padding: 10px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    box-shadow: 0 5px rgba(62, 60, 73, 0.4);
+    font-weight: 700;
+}
+main aside div.offer span {
+    font-weight: 300;
+}
+
+main aside div.free-trial-log-in {
+    margin-top: 1em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px rgba(62, 60, 73, 0.45);
+}
+
+
+/* Form */
+main aside form div {
+    position: relative;
+    margin-bottom: 20px;
+}
+main aside form input, button {
+    display: block;
+    width: 100%;
+    padding: 1em 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(62, 60, 73, 0.452);
+
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+main aside form input:focus {
+    border: 1px solid var(--blue);
+    outline: none;
+}
+
+/* Form error display */
+main aside form div.error input {
+    border: 2px solid var(--red);
+}
+main aside form div.error input::placeholder{
+    color: var(--red);
+}
+main aside form div.error img,
+main aside form div.error p{
+    display: block;
+}
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+
+main aside form div p {
+    margin-top: 5px;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.7em;
+    color: var(--red);
+    display: none;
+}
+main aside form div img {
+    position: absolute;
+    width: 25px;
+    top: 7px; right: 20px;
+    display: none;
+}
+
+main aside form button {
+    border: none;
+    background-color: var(--green);
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 3px solid hsla(154, 57%, 30%, 0.685);
+    cursor: pointer;
+}
+
+main aside form button:hover {
+    background-color: hsl(154, 73%, 65%);
+}
+
+main aside form p.terms-n-services {
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: var(--grayish-blue);
+}
+p.terms-n-services a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--red);
+}
+
+
+
+
+/* Footer  */
+footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 10px;
+    width: 30px;
+    width: 100%;
+}
+p.attribution { font-size: 11px; text-align: center; }
+p.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+/* Smaller Design */
+@media screen and (max-width: 800px) {
+    h1{ font-size: 2.3em;}
+
+    main {
+        flex-flow: row wrap;
+        text-align: center;
+        gap: 50px;
+    }
+
+    main section.heading-info{
+        width: 100%;
+        max-width: 500px;
+    }
+    main aside {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    h1{ font-size: 2em;}
+
+    main {
+        font-size: 0.9em;
+    }
+
+}
+
+
+
+
+
+
