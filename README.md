@@ -1,1 +1,1 @@
-Check it out https://github.io/prajwal18/intro-component-with-signup
+Check it out https://prajwal18.github.io/intro-component-with-signup/
